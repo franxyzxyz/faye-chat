@@ -1,5 +1,19 @@
 <h2>Chat</h2>
+<button type="button" id="testButton">CONNECT</button>
+
+<button type="button" id="d_btn">DISCONNECT</button>
+
 <%= render 'form' %>
 
 <div id="chat-text">
+</div>
+
+
+<div>
+<h3>Within Database</h3>
+<% @chats.each do |chat| %>
+  <% if chat.text != "" %>
+    <p><b>id: </b><%= chat.id %><b> handle: </b><%= chat.handle %><b> text: </b><%= chat.text %></p>
+  <% end %>
+<% end %>
 </div>
